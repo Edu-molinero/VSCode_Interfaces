@@ -1,0 +1,39 @@
+        .bg-primary-custom {
+            background-color: #007bff !important;
+        }
+
+        /* Azul */
+        .text-primary-custom {
+            color: #007bff !important;
+        }
+
+        .btn-custom {
+            background-color: #fd7e14;
+            border-color: #fd7e14;
+            color: white;
+        }
+
+        /* Naranja */
+        .btn-custom:hover {
+            background-color: #e8680f;
+            border-color: #e8680f;
+        }
+
+        /* Animaciones y transiciones */
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+
+        .fade-in {
+            animation: fadeIn 2s ease-in;
+        }
