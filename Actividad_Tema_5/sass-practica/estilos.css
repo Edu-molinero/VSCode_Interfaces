@@ -1,0 +1,23 @@
+.card {
+  background-color: #e0adad;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin: 10px;
+  font-size: 16px;
+  color: #ffffff; }
+
+.card.secundaria {
+  background-color: #dca3bc;
+  border: 2px solid #ffffff; }
+
+.card.terciario {
+  background-color: #dca3bc;
+  border: 2px solid #ffffff;
+}
+
+.card.cuarto{
+  background-color: #e0adad;
+  border: 2px solid #ffffff;
+}

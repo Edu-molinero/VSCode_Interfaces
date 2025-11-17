@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.scss">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="estilos.css.map">
+    <title>Práctica SASS - Tarjetas</title>
+</head>
+
+<body>
+    <header>
+        <h1>Práctica SASS</h1>
+        <p>Ejemplo de tarjetas con estilos SASS</p>
+    </header>
+
+    <main>
+        <section class="cards">
+            <div class="card">
+                <h2>Tarjeta principal</h2>
+                <p>Esta es la tarjeta principal con la clase card.</p>
+            </div>
+
+            <div class="card secundaria">
+                <h2>Tarjeta secundaria</h2>
+                <p>Esta es la tarjeta secundaria con las clases card y secundaria.</p>
+            </div>
+
+            <h1>Reproductor de Audio</h1>
+            <div class="card terciario">
+                <audio controls>
+                    <source src="media/AudioPractica.mp3" type="audio/mp3">
+                    <source src="media/AudioPractica.ogg" type="audio/mpeg">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+                <p><a href="media/AudioPractica.mp3" download>Descargar audio mp3</a></p>
+                <p><a href="media/AudioPractica.ogg" download>Descargar audio ogg</a></p>
+            </div>
+
+            <h1>Reproductor de Vídeo</h1>
+            <div class="card cuarto">
+                <video width="450" height="300" controls loop>
+                    <source src="media/VideoAlumno.mp4" type="video/mp4">
+                    Tu navegador no soporta el elemento de vídeo.
+                </video>
+                <p><a href="media/VideoAlumno.mp4" download>Descargar vídeo mp4</a></p>
+        </section>
+
+    </main>
+</body>
+
+</html>
