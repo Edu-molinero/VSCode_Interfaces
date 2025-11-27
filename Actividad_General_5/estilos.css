@@ -1,69 +1,91 @@
-        .bg-primary-custom {
-            background-color: #007bff !important;
-        }
+       .bg-primary-custom {
+           background-color: #007bff !important;
+       }
 
-        .text-primary-custom {
-            color: #007bff !important;
-        }
+       .text-primary-custom {
+           color: #007bff !important;
+       }
 
-        .btn-custom {
-            background-color: #fd7e14;
-            border-color: #fd7e14;
-            color: white;
-        }
+       .btn-custom {
+           background-color: #fd7e14;
+           border-color: #fd7e14;
+           color: white;
+       }
 
-        .btn-custom:hover {
-            background-color: #e8680f;
-            border-color: #e8680f;
-        }
+       .btn-custom:hover {
+           background-color: #e8680f;
+           border-color: #e8680f;
+       }
 
-        .card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
+       .card {
+           transition: transform 0.3s ease, box-shadow 0.3s ease;
+       }
 
-        .card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
+       .card:hover {
+           transform: scale(1.05);
+           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+       }
 
-        @keyframes fadeIn {
-            from {opacity: 0;}
-            to {opacity: 1;}
-        }
+       .fade-in {
+           animation: fadeIn 2s ease-in;
+       }
 
-        .fade-in {
-            animation: fadeIn 2s ease-in;
-        }
+       .titulo-animado {
+           animation: tituloMove 4s ease-in-out infinite;
+       }
 
-/* Animación del h1: aumenta tamaño, cambia color azul->naranja y se desplaza izquierda->derecha */
-@keyframes tituloMove {
-    0% { transform: translateX(0) scale(1); color: #007bff; }
-    50% { transform: translateX(30px) scale(1.08); color: #fd7e14; }
-    100% { transform: translateX(0) scale(1); color: #007bff; }
-}
+       .card-img-top {
+           transition: transform 2s ease-in-out, opacity 2s ease-in-out;
+       }
 
-.titulo-animado {
-    animation: tituloMove 4s ease-in-out infinite;
-}
+       .card-img-top:hover {
+           transform: scale(1.2);
+           opacity: 0.7;
+       }
 
-/* Transición en imagen principal dentro de tarjeta */
-.card-img-top {
-    transition: transform 2s ease-in-out, opacity 2s ease-in-out;
-}
+       .btn-custom {
+           background-color: #fd7e14;
+           border-color: #fd7e14;
+           color: white;
+       }
 
-.card-img-top:hover {
-    transform: scale(1.2);
-    opacity: 0.7;
-}
+       .btn-custom:hover {
+           background-color: #e8680f;
+           border-color: #e8680f;
+       }
 
-/* Estilos de color corporativo y botones personalizados */
-.btn-custom {
-    background-color: #fd7e14;
-    border-color: #fd7e14;
-    color: white;
-}
+       .navbar-custom {
+           background-color: #ff4500 !important;
+       }
 
-.btn-custom:hover {
-    background-color: #e8680f;
-    border-color: #e8680f;
-}
+       .navbar-custom .navbar-brand,
+       .navbar-custom .nav-link {
+           color: #ffffff !important;
+       }
+
+       @keyframes fadeIn {
+           from {
+               opacity: 0;
+           }
+
+           to {
+               opacity: 1;
+           }
+       }
+
+       @keyframes tituloMove {
+           0% {
+               transform: translateX(0) scale(1);
+               color: #007bff;
+           }
+
+           50% {
+               transform: translateX(30px) scale(1.08);
+               color: #fd7e14;
+           }
+
+           100% {
+               transform: translateX(0) scale(1);
+               color: #007bff;
+           }
+       }
