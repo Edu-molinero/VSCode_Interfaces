@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,54 +8,67 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <style>
+    h1 {
+        font-size: 3em;
+        color: rgb(255, 0, 0);
+        position: relative;
+        animation: mover 4s infinite alternate;
+    }
 
-h1 {
-    font-size: 3em;
-    color: rgb(255, 0, 0);
-    position: relative;
-    animation: mover 4s infinite alternate;
-}
+    img {
+        transition: all 2s ease-in-out;
+    }
 
-img {
-    transition: all 2s ease-in-out;
-}
+    img:hover {
+        transform: scale(1.2);
+        opacity: 0.7;
+    }
 
-img:hover {
-    transform: scale(1.2);
-    opacity: 0.7;
-}
+    @keyframes mover {
+        from {
+            left: 0;
+        }
 
-@keyframes mover {
-    from { left: 0; }
-    to { left: 100px; }
-    to { color:rgb(0, 0, 255);}
-    to { font-size: 6em;}
-}
+        to {
+            left: 100px;
+        }
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-}
-button {
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-button:hover {
-    background-color: #45a049;
-}
-#panel {
-    width: 200px;
-    height: 100px;
-    background-color: white;
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin: 10px 0;
-}
+        to {
+            color: rgb(0, 0, 255);
+        }
 
+        to {
+            font-size: 6em;
+        }
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+    }
+
+    button {
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #45a049;
+    }
+
+    #panel {
+        width: 200px;
+        height: 100px;
+        background-color: white;
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin: 10px 0;
+    }
 </style>
+
 <body>
     <h1 controls loop>Práctica de los Temas 8 y 9</h1>
     <img src="rally.jpg" alt="Imagen rally" width="350">
@@ -63,37 +77,38 @@ button:hover {
     <p id="parrafo">Este es el contenido original del párrafo.</p>
     <div id="panel">Este es el panel para hover.</div>
     <div id="teclaPulsada">Tecla pulsada: Ninguna</div>
-    
+
     <script>
-        $(document).ready(function() {
-            $('#cambiarEstilo').click(function() {
+        $(document).ready(function () {
+            $('#cambiarEstilo').click(function () {
                 $('body').css({
                     'background-color': 'lightblue',
                     'color': 'darkblue'
                 });
                 $('#parrafo').text('El contenido del párrafo ha sido cambiado.');
             });
-            
+
             $('#panel').hover(
-                function() {
+                function () {
                     $(this).animate({
                         width: '500px',
                         backgroundColor: 'lightgray'
                     }, 500);
                 },
-                function() {
+                function () {
                     $(this).animate({
                         width: '200px',
                         backgroundColor: 'white'
                     }, 500);
                 }
             );
-            
-            
-            $(document).keydown(function(event) {
+
+
+            $(document).keydown(function (event) {
                 $('#teclaPulsada').text('Tecla pulsada: ' + event.key);
             });
         });
     </script>
 </body>
+
 </html>
