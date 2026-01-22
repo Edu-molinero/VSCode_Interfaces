@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bienvenido a Kart-Z, tu circuito de karts y centro de testing de vehículos. Disfruta de tres modelos de karts: Básico, Avanzado y Experto para todos los niveles.">
     <title>Práctica General-5</title>
     <link rel="stylesheet" href="estilos.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -15,6 +16,23 @@
 
     body{
         background-color: #59c1f1;
+    }
+
+    @keyframes tituloMove {
+        0% {
+            transform: translateX(0) scale(1);
+            color: #007bff;
+        }
+
+        50% {
+            transform: translateX(30px) scale(1.08);
+            color: #d35400;
+        }
+
+        100% {
+            transform: translateX(0) scale(1);
+            color: #007bff;
+        }
     }
     </style>
     <!-- Barra de navegación -->
@@ -100,27 +118,29 @@
                 <h2>Vídeo de saludo</h2>
                 <video controls width="45%" poster="media/Video_Hola.mp4">
                     <source src="media/Video_Hola.mp4" type="video/mp4">
+                    <track kind="captions" src="media/captions_saludo.vtt" srclang="es" label="Español">
                     Tu navegador no soporta vídeo HTML5.
                 </video>
             </div>
 
             <div class="col-12">
-                <h3>Clip de demostración (reproducir fragmento)</h3>
+                <h2>Clip de demostración (reproducir fragmento)</h2>
                 <video id="clipVideo" controls width="50%">
                     <source src="media/Video_Karting.mov" type="video/mp4">
+                    <track kind="captions" src="media/captions_karting.vtt" srclang="es" label="Español">
                     Tu navegador no soporta vídeo HTML5.
                 </video>
                 <div class="mt-2">
-                    <label class="form-label">Inicio (s)</label>
+                    <label for="startTime" class="form-label">Inicio (s)</label>
                     <input id="startTime" class="form-control d-inline-block" style="width:100px;" type="number" value="0" min="0">
-                    <label class="form-label ms-2">Fin (s)</label>
+                    <label for="endTime" class="form-label ms-2">Fin (s)</label>
                     <input id="endTime" class="form-control d-inline-block" style="width:100px;" type="number" value="0" min="0">
                     <button id="playClip" class="btn btn-primary ms-2">Reproducir fragmento</button>
                 </div>
 
                 <div class="mt-3">
-                    <label class="form-label">Notas (editable)</label>
-                    <div id="notas" class="p-3 border" contentEditable="true">Escribe tus notas de test aquí...</div>
+                    <label for="notas" class="form-label">Notas (editable)</label>
+                    <div id="notas" class="p-3 border" contentEditable="true" role="textbox" aria-label="Notas editables del clip de video">Escribe tus notas de test aquí...</div>
                 </div>
             </div>
         </section>

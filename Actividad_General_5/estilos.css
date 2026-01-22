@@ -55,12 +55,18 @@
        }
 
        .navbar-custom {
-           background-color: #ff4500 !important;
+           background-color: #d35400 !important;
        }
 
        .navbar-custom .navbar-brand,
        .navbar-custom .nav-link {
            color: #ffffff !important;
+           font-weight: 600;
+       }
+
+       .navbar-custom .nav-link:hover,
+       .navbar-custom .nav-link.active {
+           color: #e8e8e8 !important;
        }
 
        @keyframes fadeIn {
@@ -81,11 +87,54 @@
 
            50% {
                transform: translateX(30px) scale(1.08);
-               color: #fd7e14;
+               color: #d35400;
            }
 
            100% {
                transform: translateX(0) scale(1);
                color: #007bff;
            }
+       }
+
+       /* Mejora de contraste para accesibilidad */
+       body {
+           color: #333333;
+       }
+
+       .form-label {
+           color: #333333;
+           font-weight: 500;
+       }
+
+       h1, h2, h3, h4, h5, h6 {
+           color: #333333;
+       }
+
+       .card-title {
+           color: #333333;
+           font-weight: 600;
+       }
+
+       .btn-outline-primary {
+           color: #0056b3;
+           border-color: #0056b3;
+       }
+
+       .btn-outline-primary:hover {
+           color: #ffffff;
+           background-color: #0056b3;
+           border-color: #0056b3;
+       }
+
+       /* Mejorar contraste en links del footer */
+       footer a {
+           color: #003d82;
+       }
+
+       footer a:hover {
+           color: #0056b3;
+       }
+
+       footer p {
+           color: #333333;
        }
